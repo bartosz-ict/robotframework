@@ -47,5 +47,9 @@ apt-get install -y git-core
 
 echo "Oefeningen naar vm kopieren"
 mkdir /home/osboxes/workspace
-cp /media/toollabsz/RFtraining /home/osboxes/workspace/RFtraining -R
+cp /media/robotframework/RFtraining /home/osboxes/workspace/RFtraining -R
 chown osboxes:osboxes /home/osboxes/workspace -R
+cp /media/robotframework/scripts/demoapp.desktop /home/osboxes/Desktop
+chown osboxes:osboxes /home/osboxes/Desktop/demoapp.desktop
+chmod +x /home/osboxes/Desktop/demoapp.desktop
+
