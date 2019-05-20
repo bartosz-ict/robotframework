@@ -17,7 +17,7 @@ Benodigdheden: Virtualbox (https://www.virtualbox.org) en een internetverbinding
 * Installeer Virtualbox voor je eigen OS
     * https://www.virtualbox.org/wiki/Downloads
 * Download een Ubuntu Virtuele machine van https://www.osboxes.org 
-    * deze ToolLabsz gebruikt Ubuntu 19.04.1 Disco Dingo  https://www.osboxes.org/ubuntu/
+    * deze ToolLabsz gebruikt Ubuntu 19.04 Disco Dingo  https://www.osboxes.org/ubuntu/
     * pak het file uit, je hebt het vdi file nodig
 * Start Virtualbox, maak een nieuwe Virtual Machine aan, pas eventueel het beschikbare geheugen aan en gebruik het uitgepakte file als disk
 
