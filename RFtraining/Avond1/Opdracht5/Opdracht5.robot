@@ -1,21 +1,41 @@
 *** Settings ***
-Documentation     Schrijf één van onderstaande testgevallen om in de Gherkin-stijl
-Resource          resource.robot
+Documentation     Schrijf één van onderstaande testgevallen om in de Gherkin-stijl.
+Library    SeleniumLibrary    
+
+*** Variables ***
+${url}            http://localhost:7272
+${browser}        chrome
+${loginnaam}      demo
+${correct_wachtwoord}     mode
+${foutief_wachtwoord}     edom
+${welkomstpagina}    Welcome Page
+${foutpagina}    Error Page
 
 *** Test Cases ***
-Valid Login
-    Open Browser To Login Page
-    Input Username    demo
-    Input Password    mode
-    Submit Credentials
-    Welcome Page Should Be Open
-    [Teardown]    Close Browser
+Log succesvol in
+    Open de login pagina
+    Vul loginnaam en wachtwoord in    ${loginnaam}    ${correct_wachtwoord}
+    Check dat je succesvol bent ingelogd
+    Close Browser
+    
+Log in met een foutief wachtwoord
+    Open de login pagina
+    Vul loginnaam en wachtwoord in    ${loginnaam}    ${foutief_wachtwoord}
+    Check dat je login is mislukt
+    Close Browser
 
-Login With Invalid Credentials Should Fail
-    Open Browser To Login Page
-    Input Username    invalid
-    Input Password    password
-    Submit Credentials
-    Login Should Have Failed
-    [Teardown]    Close Browser
+*** Keywords ***
+Open de login pagina
+    Open Browser    ${url}    ${browser}
 
+Vul loginnaam en wachtwoord in
+    [Arguments]    ${login}    ${wachtwoord}
+    Input Text    username_field    ${login}
+    Input Text    password_field    ${wachtwoord}
+    Click Button    login_button
+
+Check dat je succesvol bent ingelogd
+    Title Should Be    ${welkomstpagina}
+    
+Check dat je login is mislukt
+    Title Should Be    ${foutpagina}
