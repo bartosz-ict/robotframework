@@ -2,13 +2,10 @@
 <projectConfiguration>
     <configVersion>2</configVersion>
     <relativeTo>WORKSPACE</relativeTo>
-    <referencedLibrary type="PYTHON" name="SeleniumLibrary" path="C:/Python37/Lib/site-packages"/>
+    <referencedLibrary type="PYTHON" name="SeleniumLibrary" path="/usr/local/lib/python3.7/dist-packages/SeleniumLibrary/__init__.py"/>
     <pythonpath/>
     <classpath/>
     <excludedForValidation/>
     <isValidatedFileSizeCheckingEnabled>true</isValidatedFileSizeCheckingEnabled>
     <validatedFileMaxSize>1024</validatedFileMaxSize>
-    <isReferencedLibrariesAutoReloadEnabled>true</isReferencedLibrariesAutoReloadEnabled>
-    <isReferencedLibrariesAutoDiscoveringEnabled>true</isReferencedLibrariesAutoDiscoveringEnabled>
-    <isLibrariesAutoDiscoveringSummaryWindowEnabled>false</isLibrariesAutoDiscoveringSummaryWindowEnabled>
 </projectConfiguration>
