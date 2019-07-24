@@ -29,3 +29,6 @@ Log in met een foutief wachtwoord
     Title Should Be    ${foutpagina}
     Close Browser
     
+*** Keywords ***
+
+    

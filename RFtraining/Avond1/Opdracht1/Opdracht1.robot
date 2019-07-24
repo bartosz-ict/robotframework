@@ -4,4 +4,4 @@ Library    SeleniumLibrary
 
 *** Test Cases ***
 Open bartosz.nl in een browser
-    
+    Open Browser    https://www.bartosz.nl
