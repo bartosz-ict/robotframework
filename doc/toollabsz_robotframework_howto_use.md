@@ -29,14 +29,12 @@ Benodigdheden: Virtualbox (https://www.virtualbox.org) en een internetverbinding
 
 1. Installeer Virtualbox voor je eigen OS:
     * https://www.virtualbox.org/wiki/Downloads
+	Installeer ook het VirtualBox Extension Pack.
+	Wanneer je installeert op een Mac waarop al Mojave is geïnstalleerd, kan de installatie problemen opleveren. De workaround hiervoor vind je hier:
+	https://www.reddit.com/r/MacOS/comments/bqbowl/virtualbox_installation_fails_on_macos_mojave/
 2. Download de Appliance 
     * van Sebastiaan's google drive share https://drive.google.com/drive/folders/1BdppzCdDSyEvI4mOXDHhfKHNloUR1m_8?usp=sharing
     * vanaf een aangeleverde USB stick
 3. Importeer de appliance
     * log in met gebruiker/wachtwoord ‘osboxes.org’
-
-
-
-TODO wat is een goede virtualbox configuratie, wat moet je minimaal hebben?
-Pascals' config: i7, macOs, 1 CPU, base memory 2048 MB, video memory 128 MB
-Vilas's config: i5(4200u), Windows 10,  2 CPU base memory 2048, video memory 64 MB
+4. Bij het instellen van cpu, base memory en video memory is aan te raden om in ieder geval de video memory maximaal te zetten (128MB), de rest naar eigen inzicht t.o.v. wat beschikbaar is.	
