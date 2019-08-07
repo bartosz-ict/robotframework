@@ -1,8 +1,6 @@
 *** Settings ***  
-Documentation    Wanneer je meerdere testomgevingen hebt, is het soms handig om je testen op meerdere omgevingen te kunnen draaien.
-...    <Beschrijf hier de 2 testomgevingen>
-...    Maak dictionaries voor de DEV en de TEST omgeving waarin je de variabelen die verschillend zijn per omgeving als keys opneemt.
-...    Pas de test aan, zodat de omgevings-dictionary wordt gebruikt en draai de test voor beide omgevingen.
+Documentation    Om je tests onderhoudbaar te houden, kun je keywords maken van (delen van) tests die je in meerdere testgevallen gebruikt.
+...    Pas dit toe bij de tests uit Opdracht 3.
 Library    SeleniumLibrary    
 Library    Collections    
 
@@ -19,6 +17,7 @@ ${foutpagina}    Error Page
 &{foutieve_inlog}    naam=joost    ww=edom    landingpage=${foutpagina}
 
 
+*** Test Cases ***
 *** Test Cases ***
 Log succesvol in
     Open de login pagina
