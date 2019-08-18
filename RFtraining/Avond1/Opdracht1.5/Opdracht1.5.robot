@@ -1,15 +1,20 @@
 *** Settings ***
-Documentation     Schrijf één van onderstaande testgevallen om in de Gherkin-stijl.
+Documentation    Schrijf één van onderstaande testgevallen om in de Gherkin-stijl. 
+          ...    Gebruik hiervoor de volgende notatie richtlijnen:
+          ...    Given -> Opstellen van een preconditie
+          ...    When  -> Uitvoeren van een handeling
+          ...    Then  -> Verificatie van een resultaat
+
 Library    SeleniumLibrary    
 
 *** Variables ***
-${url}            http://localhost:7272
-${browser}        chrome
-${loginnaam}      demo
-${correct_wachtwoord}     mode
-${foutief_wachtwoord}     edom
-${welkomstpagina}    Welcome Page
-${foutpagina}    Error Page
+${url}=           http://localhost:7272
+${browser}=       chrome
+${loginnaam}=     demo
+${correct_wachtwoord}=    mode
+${foutief_wachtwoord}=    edom
+${welkomstpagina}=    Welcome Page
+${foutpagina}=    Error Page
 
 *** Test Cases ***
 Log succesvol in
