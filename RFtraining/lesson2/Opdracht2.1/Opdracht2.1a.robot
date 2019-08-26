@@ -1,14 +1,14 @@
 *** Settings ***
-Documentation    Gegeven de listvariabele ${lijst}. Doe de volgende dingen met de lijst:
-...    - Voeg een item toe
-...    - Verwijder een item
-...    - Lees één waarde van de lijst uit
-...    - Bonus: maak een nieuwe lijst die de gesorteerde variant is van de originele lijst     
+Documentation    Gegeven de lijst van voornamen. Doe de volgende dingen met de lijst:
+...    - Voeg je eigen naam toe
+...    - Verwijder een naam van de lijst
+...    - Lees één naam van de lijst uit en zet deze in een variabele
+...    - Bonus: maak een nieuwe lijst die de gesorteerde variant is van de originele lijst
 ...    
-Library    Collections    
+Library    Collections
 
 *** Variables ***
-${lijst}    
+@{voornamen}    Sebastiaan    Gerwin    Pascal    Erik    Vincent    Maarten
 
 *** Test Cases ***
 Opdracht2.1a
