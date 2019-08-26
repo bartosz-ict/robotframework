@@ -1,1 +1,1 @@
-python3 ~/workspace/RFtraining/demoapp/server.py
+python3 ~/workspace/RFtraining/demoapp_test/server.py
