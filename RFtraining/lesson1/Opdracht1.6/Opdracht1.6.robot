@@ -16,13 +16,13 @@ ${foutpagina}=    Error Page
 *** Keywords ***
 ght
     Given browser of <${browser}> opens the correct url <${url}>
-    When login name <${username}> and password ${${correct_wachtwoord}> are submitted by user
+    When login name <${username}> and password <${correct_wachtwoord}> are submitted by user
     Then verify that user is succesfully logged in
     And browser is closed
 
 ghf
-    Given browser of <${type}> opens the correct url <${url}>
-    When login name <${username}> and password ${foutief_wachtwoord}> are submitted by user
+    Given browser of <${browser}> opens the correct url <${url}>
+    When login name <${username}> and password <${foutief_wachtwoord}> are submitted by user
     Then verify that user has failed to logged in
     And browser is closed
 
@@ -30,8 +30,7 @@ ghf
 browser of <${type}> opens the correct url <${url}>
     Open Browser    ${url}    ${type}
 
-login name <${name}> and password ${password}> are submitted by user
-    [Arguments]    ${name}    ${password}
+login name <${name}> and password <${password}> are submitted by user
     Input Text    username_field    ${name}
     Input Text    password_field    ${password}
     Click Button    login_button

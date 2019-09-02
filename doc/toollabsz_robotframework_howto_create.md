@@ -41,7 +41,7 @@ Benodigdheden: Virtualbox (https://www.virtualbox.org) en een internetverbinding
         * de tool die je wil gebruiken in een werkend project
     * uitvoer via
     
-    sudo su && cd /media/sf_toollabsz/scripts/ && chmod +x setup.sh
+    sudo su && cd /media/robotframework/scripts/ && chmod +x setup.sh
     ./setup.sh
 
 
@@ -91,5 +91,5 @@ apt-get install -y git-core
 
 echo "Oefeningen naar vm kopieren"
 mkdir /home/osboxes/workspace
-cp /media/toollabsz/RFtraining /home/osboxes/workspace/RFtraining -R
+cp /media/robotframework/RFtraining /home/osboxes/workspace/RFtraining -R
 chown osboxes:osboxes /home/osboxes/workspace -R

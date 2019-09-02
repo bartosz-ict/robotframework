@@ -3,5 +3,5 @@
 Version=1.0
 Type=Application
 Terminal=true
-Exec=/home/osboxes/workspace/RFtraining/demoapp/server.sh
-Name=DemoApp
+Exec=/home/osboxes/workspace/RFtraining/demoapp_dev/server.sh
+Name=DemoAppDEV
