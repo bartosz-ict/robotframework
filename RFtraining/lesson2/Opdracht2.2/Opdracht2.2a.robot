@@ -1,5 +1,5 @@
 *** Settings ***
-Documentation    Gegeven de dictionary ${dict}. Doe de volgende dingen met de lijst:
+Documentation    Gegeven de dictionary ${dict}. Doe de volgende dingen met de dictionary:
 ...    - Voeg een item toe
 ...    - Verwijder een item
 ...    - Lees één waarde van de lijst uit
@@ -8,7 +8,7 @@ Documentation    Gegeven de dictionary ${dict}. Doe de volgende dingen met de li
 Library    Collections    
 
 *** Variables ***
-${lijst}    
+&{dict}=    Mark=Utrecht    Fred=Eindhoven    Erika=Nijmegen    Lotte=Velp    
 
 *** Test Cases ***
 Opdracht2.2a

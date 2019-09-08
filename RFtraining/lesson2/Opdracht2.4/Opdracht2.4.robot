@@ -1,53 +1,21 @@
 *** Settings ***  
-Documentation    Om je tests onderhoudbaar te houden, kun je keywords maken van (delen van) tests die je in meerdere testgevallen gebruikt.
-...    Pas dit toe bij de tests uit Opdracht 3.
+Documentation    Om door verschillende elementen uit een lijst heen te 'loopen' kan er gebruik gemaakt worden van "FOR" loops.
+          ...    Voer in één test de controle uit voor beide browsers door gebruik te maken van een FOR loop.
+          ...    Let op de volgende zaken:
+          ...    1. Bepaal de lengte van de lijst met 'Get Length'
+          ...    2. Kies een favoriet nummer, en bepaal op welke positie in de lijst deze staat.
+          ...    3. Wanneer de verwachte waarde gevonden wordt, stop met zoeken.
+
 Library    SeleniumLibrary    
-Library    Collections    
+Library    Collections  
 
-*** Variables ***
-${url}            http://localhost:7272
-${browser}        chrome
-${loginnaam}      demo
-${correct_wachtwoord}     mode
-${foutief_wachtwoord}     edom
-${welkomstpagina}    Welcome Page
-${foutpagina}    Error Page
-
-&{correcte_inlog}    naam=demo    ww=mode    landingpage=${welkomstpagina}
-&{foutieve_inlog}    naam=joost    ww=edom    landingpage=${foutpagina}
-
-
-*** Test Cases ***
-*** Test Cases ***
-Log succesvol in
-    Open de login pagina
-    Vul loginnaam en wachtwoord in    ${correcte_inlog}
-    Check de resultaatpagina    ${correcte_inlog}
-    Close Browser
-    
-Log in met een foutief wachtwoord
-    Open de login pagina
-    Vul loginnaam en wachtwoord in    ${foutieve_inlog}
-    Check de resultaatpagina    ${foutieve_inlog}
-    Close Browser
+Resource   RandomGenerator.resource
 
 *** Keywords ***
-Open de login pagina
-    Open Browser    ${url}    ${browser}
+This keyword returns random numbers
+    ${ReturnedList}=    Random Generator
+    Log list    ${ReturnedList}
 
-Vul loginnaam en wachtwoord in
-    [Arguments]    ${login}
-    Input Text    username_field    ${login.naam}
-    Input Text    password_field    ${login.ww}
-    Click Button    login_button
+*** Test Cases ***
 
-Check dat je succesvol bent ingelogd
-    Title Should Be    ${welkomstpagina}
-    
-Check dat je login is mislukt
-    Title Should Be    ${foutpagina}
 
-Check de resultaatpagina
-    [Arguments]    ${login}
-    Title Should Be    ${login.landingpage}
-    

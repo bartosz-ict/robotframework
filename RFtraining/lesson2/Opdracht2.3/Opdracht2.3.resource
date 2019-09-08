@@ -1,6 +1,10 @@
+*** Settings ***
+Library    SeleniumLibrary    
+Library    Collections    
+
 *** Keywords ***
 Open de login pagina
-    [Argument]    ${browser}
+    [Arguments]    ${browser}=chrome
     Open Browser    ${url}    ${browser}
 
 Vul loginnaam en wachtwoord in

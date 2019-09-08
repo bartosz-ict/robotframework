@@ -1,20 +1,30 @@
 *** Settings ***  
-Documentation    Om door verschillende elementen uit een lijst heen te 'loopen' kan er gebruik gemaakt worden van "FOR" loops.
-          ...    Voer in één test de controle uit voor beide browsers door gebruik te maken van een FOR loop.
-          ...    Let op de volgende zaken:
-          ...    1. Bepaal de lengte van de lijst met 'Get Length'
-          ...    2. Kies een favoriet nummer, en bepaal op welke positie in de lijst deze staat.
-          ...    3. Wanneer de verwachte waarde gevonden wordt, stop met zoeken.
+Documentation    Met behulp van FOR loops kan er gemakkelijk testgegevens tijdens de uitvoer worden vastgelegd.
+          ...    Voor bewijsvoering, leg de volgende zaken vast in onderstaande testgeval:
+          ...    1. Leg de gegenereerde lijst vast
+          ...    2. Leg het nummer vast waarop werd gecontroleerd
 
-Library    SeleniumLibrary    
 Library    Collections  
 
 Resource   RandomGenerator.resource
 
 *** Keywords ***
+Verify number is in list    [Arguments]    ${list}    ${verify}
+    ${max}=    Get Length    ${list}
+    FOR    ${entry}    IN RANGE   0    ${max}+1
+        Run Keyword If    ${entry} == ${max}    Fail    The number was not found.
+        
+        Continue For Loop If    ${list}[${entry}] != ${verify}
+        Log    Succes! The number '${list}[${entry}]' is equal to the verification number '${verify}' 
+        Exit For Loop If    ${list}[${entry}] == ${verify}
+    END
+
+tst    [Arguments]    ${verify}
+   ${ReturnedList}=    Random Generator
+    Verify Number is in list    ${ReturnedList}    ${verify}
 
 *** Test Cases ***
-This test checks for random numbers
-    ${ReturnedList}=    Random Generator
-    Log list    ${ReturnedList}
+Test 1 - Check number    tst    200
+Test 2 - Check number    tst    20
+        
 
