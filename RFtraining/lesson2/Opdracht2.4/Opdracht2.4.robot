@@ -1,21 +1,20 @@
 *** Settings ***  
-Documentation    Om door verschillende elementen uit een lijst heen te 'loopen' kan er gebruik gemaakt worden van "FOR" loops.
-          ...    Voer in één test de controle uit voor beide browsers door gebruik te maken van een FOR loop.
-          ...    Let op de volgende zaken:
-          ...    1. Bepaal de lengte van de lijst met 'Get Length'
-          ...    2. Kies een favoriet nummer, en bepaal op welke positie in de lijst deze staat.
-          ...    3. Wanneer de verwachte waarde gevonden wordt, stop met zoeken.
+Documentation    Bij een random gegenereerde lijst doe het volgende:
+...              - Bepaal de lengte
+...              - Kies een nummer en kijk op welke positie deze staat
+...              - Stop met zoeken zodra de verwachte waarde is gevonden
+...              - Bonus: Zoek uit met welk keyword je het bovenstaande in één keer kan doen
 
-Library    SeleniumLibrary    
+
 Library    Collections  
 
 Resource   RandomGenerator.resource
 
-*** Keywords ***
-This keyword returns random numbers
-    ${ReturnedList}=    Random Generator
-    Log list    ${ReturnedList}
-
 *** Test Cases ***
 
 
+*** Keywords ***
+This keyword returns random numbers
+    ${ReturnedList} =    Random Generator
+    Log list    ${ReturnedList}
+    [Return]    ${ReturnedList}

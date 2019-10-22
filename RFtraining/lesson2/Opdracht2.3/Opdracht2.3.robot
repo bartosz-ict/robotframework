@@ -1,34 +1,10 @@
 *** Settings ***  
-Documentation    Om door verschillende elementen uit een lijst heen te 'loopen' kan er gebruik gemaakt worden van "FOR" loops.
-          ...    Voer in één test de controle uit voor beide browsers door gebruik te maken van een FOR loop.
-          ...    Let op de volgende zaken:
-          ...    1. FOR loop moet om het gehele testgeval heen gezet worden
-          ...    2. Je hebt een 'lijst' van browsers nodig (chrome/gc/firefox/ff)
-          ...    3. De functie 'Open de login pagina' heeft een argument nodig waarin browser wordt ingevuld
-
-Resource    Opdracht2.3.resource
+Documentation    Gegegeven een lijst met auto namen, doe er de volgende dingen mee:
+...              Loop door de lijst en print van elke auto de naam 
+...              Bonus: sorteer de lijst in omgekeerde volgorde en print de naam van elke auto
 
 *** Variables ***
-${url}=                   http://localhost:7272
-${browser}=               chrome
-${loginnaam}=             demo
-${correct_wachtwoord}=    mode
-${foutief_wachtwoord}=    edom
-${welkomstpagina}=        Welcome Page
-${foutpagina}=            Error Page
-
-&{correcte_inlog}=    naam=demo     ww=mode    landingpage=${welkomstpagina}
-&{foutieve_inlog}=    naam=joost    ww=edom    landingpage=${foutpagina}
+@{Lijst met auto's}    Mazda-3    Ford Focus    Honda Civic    Range Rover Sport     Range Rover E-Sport    Honda Civic Hybrid    Ford Focus ST
 
 *** Test Cases ***
-Log succesvol in
-    Open de login pagina    
-    Vul loginnaam en wachtwoord in    ${correcte_inlog}
-    Check de resultaatpagina    ${correcte_inlog}
-    Close Browser
-    
-Log in met een foutief wachtwoord
-    Open de login pagina
-    Vul loginnaam en wachtwoord in    ${foutieve_inlog}
-    Check de resultaatpagina    ${foutieve_inlog}
-    Close Browser
+Opdracht2.3
