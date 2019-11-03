@@ -3,17 +3,17 @@ Documentation   Overview of different sections in Robot Framework.
 
 
 *** Variables ***
-${VARIABLE}     Value
+${var_brand}     Ford
 
 
 *** Keywords ***
-Name of a function    [Arguments]    ${VAR}
-    [Documentation]    Description for keyword
-    log    ${VAR}
+Show value of variable in log    [Arguments]    ${var_value}
+    [Documentation]    Return the value of a variable in the log.
+    log    ${var_value}
 
 
 *** Test Cases ***
-Name of a test case  
-    Name of a function    ${VARIABLE}
+Test 1: Show the brand which is tested  
+    Show value of variable in log    ${var_brand}
 
 

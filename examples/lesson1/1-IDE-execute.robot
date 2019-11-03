@@ -1,5 +1,5 @@
 *** Settings ***
-Documentation    Een klein voorbeeld testje om te laten zien waar een IDE uit bestaat.
+Documentation    A simple example test to show what an IDE contains.
 
 Library    Collections
 Library    SeleniumLibrary
@@ -7,24 +7,24 @@ Library    SeleniumLibrary
 Force Tags    Overview    IDE    Tags    Example
 
 *** Variables ***
-${variable}      Waarde
-&{dictionary}    Sleutel1=DictionaryWaarde1    Sleutel2=DictionaryWaarde2
-@{list}          Positie 1    Positie 2    Positie 3    Positie 4
+${var_brand}     Ford
+&{dct_car}       brand=Ford    type=Fiesta    fuel=Diesel
+@{lst_sensors}   Parking    Climate    Seats    Collision
 
 *** Keywords ***
-Laat waarden in een lijst zien    [Arguments]    ${LIST}
-    [Documentation]    Deze functie laat alle waarden in een lijst zien.
+Show all the values in a list    [Arguments]    ${list}
+    [Documentation]    This function shows what content a list has in the log.
 
-    Log List    ${LIST}
+    Log List    ${list}
     
-Laat een waarde in variabele zien    [Arguments]    ${VAR}
-    [Documentation]    Deze functie laat een waarde in een variabele zien.
+Show the value in a variable    [Arguments]    ${var}
+    [Documentation]    This function shows what content a variable has in the log.
     
-    Log    De variabele '${VAR}' staat in deze variabele.
+    Log    De variabele '${var}' staat in deze variabele.
     
 *** Test Case ***
-Test 1: Display variabele
-   Laat een waarde in variabele zien    ${variable}
+Test 1: Display what brand car is tested
+   Show the value in a variable    ${var_brand}
 
 Test 2: Display lijst
-   Laat waarden in een lijst zien    ${list} 
+   Show all the values in a list    ${lst_sensors} 
