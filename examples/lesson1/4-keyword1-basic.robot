@@ -1,13 +1,19 @@
 *** Keywords ***
-Function Name    [Arguments]    ${VALUE}
-    [Documentation]    Description for user keyword
-    ${ITEM}=    User defined    ${VALUE}    #User created keyword
-    Log    ${ITEM}      #Log is a builtIn keyword
+Set gear    [Arguments]    ${gear}
+    [Documentation]    Function that triggers actions based on a gear being set.
+    ${resultCamera}=    Set status backup camera    ${gear}
+    Log    ${resultCamera}
     
-User defined    [Arguments]    ${ARG}
-    [Documentation]    A self defined keyword for setting a variable
-    ${VAR}=    Set Variable    ${ARG}    #Set Variable is BuiltIn
-    [Return]    ${VAR}
+Set status backup camera    [Arguments]    ${gear}
+    [Documentation]    Returns status of camera based on reverse gear input or not.
+    ${status}=    Set Variable if
+                       ...    '${gear}' == 'Reverse'    Camera is On
+                       ...    '${gear}' != 'Reverse'    Camera is Off
+    [Return]    ${status}
 
 *** Test Cases ***
-Test Case 1    Function Name    Waarde
+Test Case 1: Turn on camera when reversing    
+    Set gear    Reverse
+
+Test Case 2: Turn off camera not reversing
+    Set gear    Gear 1

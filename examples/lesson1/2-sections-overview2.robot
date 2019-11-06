@@ -1,41 +1,47 @@
 *** Settings ***
 Documentation   Overview of Settings
 
-Resource        ../global/env/prod-1.resource
+Resource        ../env/prod-1.resource
 
 Library         Collections
 Library         SeleniumLibrary
 
-Force Tags      Overview    Testcase    Tags
+Force Tags      Overview    Global    Cars
 
-Suite Setup     Function name    ${VARIABLE}
-Suite Teardown  Function name    ${VARIABLE}
+Suite Setup     Start your Engines    ${var_turnKeyRight}
+Suite Teardown  Stop your Engines    ${var_turnKeyLeft}
 
 *** Variables ***
-${VARIABLE}     Value
-&{DICTIONARY}   KEY1=Value1   KEY2=Value2
-@{LIST}         Position 1    Position 2
-...             Position 3    Position 4
+${var_turnKeyRight}     Start
+${var_turnKeyLeft}      Stop
+&{dct_route}    Origin=Veenendaal   Destination=Den Haag
+@{lst_gears}    Reverse    Gear 1    Gear 2    
+...             Gear 3     Gear 4    Gear 5
 
-${VAR1}=    ${DICTIONARY}[KEY1]    #Geeft waarde "Value1"
-${VAR2}=    ${LIST}[1]            #Geeft waarde "Position 1"
+${here}=    ${dct_route}[Origin]    #Returns value "Veenendaal"
+${gearshift}=    ${lst_gears}[1]    #Returns value "Gear 1"
 
 *** Keywords ***
-Function name    [Arguments]    ${VAR}
-    [Documentation]    Description for keyword
-    log    ${VAR}
+Start your Engines    [Arguments]    ${motion}
+    [Documentation]    With this function, your engine is started.
+    log    ${motion}
 
-Gherkin keyword with ${VAR} included
-    [Documentation]    Description for gherkin sentence
-    log    ${VAR}
+Stop your Engines    [Arguments]    ${motion}
+    [Documentation]    With this function, your engine is stopped.
+    log    ${motion}
+
+Drive your car from <${here}> to <${there}>
+    [Documentation]    This function relocates your car.
+    log    Origin: ${here}
+    log    Destination: ${there}
 
 *** Test Cases ***
-Test Case 1  Function name    ${VARIABLE}
-    [Documentation]    Test documentation
-    [Tags]             Subject    Regression    High
+Test Case 1: Drive from Home to Work
+    [Documentation]    Verify the route to work from home. 
+    [Tags]             Home-Work    Regression    Low
+    Drive your car from <Home> to <Work>
 
-Test Case 2
-    [Documentation]    Test documentation
-    [Tags]             Subject    Non-functional    Low
-    
-    Given Gherkin keyword with ${VARIABLE} included
+Test Case 2: Drive from Work to Home 
+    [Documentation]    Verify the route to work from home.
+    [Tags]             Work-Home    Non-functional    High
+    Drive your car from <Work> to <Home>

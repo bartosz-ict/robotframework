@@ -1,14 +1,13 @@
 *** Settings ***
-Documentation   Overview of how to use Scalar variables
+Documentation   Overview of how to combine variables.
 
 *** Variables ***
-${VAR1}=        Standaard
-${VAR2}=        Notatie
-${COMBI}=       ${VAR1} ${VAR2}
+${var_brand}=    Lamborghini
+${var_type}=     Countach
 
-${STANDAARD-NOTATIE}=    Samenvoeging van variabelen
+${var_concat}=    ${var_brand} ${var_type}
+#Note the '1 space' difference between two variables
 
 *** Test Cases ***
 Test Case 1  
-    Log    ${COMBI}            # Standaard Notatie
-    Log    ${${VAR1}-${VAR2}}
+    Log    ${var_concat}    #Lamborghini Countach as value
