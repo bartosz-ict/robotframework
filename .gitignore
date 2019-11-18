@@ -5,3 +5,4 @@
 **/selenium-screenshot-*.png
 **/.project
 
+/libspecs/

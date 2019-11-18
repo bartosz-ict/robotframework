@@ -1,5 +1,5 @@
 *** Settings ***
-Resource        2-gherkin1-testtemplate2.resource
+Resource        2-gherkin1-testtemplate.resource
 
 Test Template    Execution
 
@@ -7,7 +7,7 @@ Test Template    Execution
 Execution    [Arguments]    ${input}    ${multiplier}    ${result}
     Given value of var <${input}> is present
     When value of var input is multiplied by "${multiplier}"
-    Then value of var result should be [${result}]
+    Then value of var <result> should be [${result}]
 
 *** Test Cases ***
 Testcases

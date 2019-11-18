@@ -1,17 +1,12 @@
 *** Settings ***
-Documentation   Overview of how to use Scalar variables
+Documentation   Overview of how to combine variables to a new result
 
 *** Variables ***
-${VAR1}=        Standaard
-${VAR2}=        Notatie
+${var_brand}=    Lamborghini
+${var_type}=     Countach
 
-${COMBI}=       ${VAR1} ${VAR2}  
-#Let op, niet meer dan 1 spatie afstand
-
-${STANDAARD-NOTATIE}=    Samenvoeging van variabelen
+${Lamborghini-Countach}=    Oldtimer
 
 *** Test Cases ***
 Test Case 1  
-    Log    ${COMBI}            #Standaard Notatie
-    Log    ${${VAR1}-${VAR2}}  #Samenvoeging van variabelen
-    
+    Log    ${${var_brand}-${var_type}}    #Oldtimer as value
