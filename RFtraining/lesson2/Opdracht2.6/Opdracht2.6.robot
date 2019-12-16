@@ -10,12 +10,6 @@ Documentation    Robot ondersteund verschillende vormen van validaties, maar Ã©Ã
 Library    Collections  
 
 Resource   RandomGenerator.resource
-
-*** Keywords ***
-Compare Expected Result and Actual Result
-    [Arguments]    ${Expected}    ${Actual}
-    ${fileExpected}=    Get File    ${Expected}
-    ${fileActual}=      Get File    ${Actual}
-    Should be Equal    ${fileExpected}    ${fileActual}
-    
+   
 *** Test Cases ***
+Opdracht2.6
