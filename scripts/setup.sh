@@ -2,6 +2,9 @@
 #setup versions
 JDK_VERSION=8
 RED_VERSION=0.8.12
+GIT_USER_NAME=johndoorzon
+GIT_USER_EMAIL=smolenaar@gmail.com
+
 
 echo "Update system"
 apt-get update -y
@@ -43,13 +46,17 @@ chmod +x /usr/bin/geckodriver
 
 echo "Installeer git"
 apt-get install -y git-core
+git config --global user.name "$GIT_USER_NAME"
+git config --global user.email "$GIT_USER_EMAIL"
+ 
 
-echo "Oefeningen naar vm kopieren"
+echo "Oefeningen naar vm kopieren en git configureren"
+git clone https://github.com/bartosz-ict/robotframework.git 
 mkdir /home/osboxes/workspace
-cp /media/robotframework/RFtraining /home/osboxes/workspace/RFtraining -R
-chown osboxes:osboxes /home/osboxes/workspace -R
-cp /media/robotframework/scripts/demoapp*.desktop /home/osboxes/Desktop
-chown osboxes:osboxes /home/osboxes/Desktop/demoapp*.desktop
+ln -s /home/osboxes/workspace/RFtraining /home/osboxes/robotframework/RFtraining
+chown osboxes:osboxes /home/osboxes -R
+git reset --hard
+cp /home/osboxes/robotframework/scripts/demoapp*.desktop /home/osboxes/Desktop
 chmod +x /home/osboxes/Desktop/demoapp*.desktop
 
 echo "Tijdzone goedzetten"
