@@ -8,18 +8,18 @@ Library         SeleniumLibrary
 
 Force Tags      Overview    Global    Cars
 
-Suite Setup     Start your Engines    ${var_turnKeyRight}
-Suite Teardown  Stop your Engines    ${var_turnKeyLeft}
+Suite Setup     Start your Engines    ${turnKeyRight_var}
+Suite Teardown  Stop your Engines    ${turnKeyLeft_var}
 
 *** Variables ***
-${var_turnKeyRight}     Start
-${var_turnKeyLeft}      Stop
-&{dct_route}    Origin=Veenendaal   Destination=Den Haag
-@{lst_gears}    Reverse    Gear 1    Gear 2    
-...             Gear 3     Gear 4    Gear 5
+${turnKeyRight_var}     Start
+${turnKeyLeft_var}      Stop
+&{route_dct}            Origin=Veenendaal   Destination=Den Haag
+@{gears_lst}            Reverse    Gear 1    Gear 2    
+...                     Gear 3     Gear 4    Gear 5
 
-${here}=    ${dct_route}[Origin]    #Returns value "Veenendaal"
-${gearshift}=    ${lst_gears}[1]    #Returns value "Gear 1"
+${here}=    ${route_dct}[Origin]    #Returns value "Veenendaal"
+${gearshift}=    ${gears_lst}[1]    #Returns value "Gear 1"
 
 *** Keywords ***
 Start your Engines    [Arguments]    ${motion}

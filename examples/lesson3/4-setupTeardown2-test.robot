@@ -1,11 +1,8 @@
 *** Settings ***
-Suite Setup       Run Keywords
-...               Open Browser                    AND
-...               Log    Setup entry executed
+Library    SeleniumLibrary
 
-Suite Teardown    Run Keywords
-...               Close all Browsers              AND 
-...               Log    Teardown entry executed
+Test Setup        Open Browser    https://www.example.com
+Test Teardown     Close all Browsers 
 
 *** Test cases ***
 Test 1 - Capture Bartosz

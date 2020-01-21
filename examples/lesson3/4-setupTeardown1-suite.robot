@@ -1,5 +1,7 @@
 *** Settings ***
-Suite Setup       Open Browser
+Library    SeleniumLibrary
+
+Suite Setup       Open Browser    https://example.com/
 Suite Teardown    Close All Browsers
 
 *** Test cases ***

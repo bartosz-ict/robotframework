@@ -7,9 +7,9 @@ Library    SeleniumLibrary
 Force Tags    Overview    IDE    Tags    Example
 
 *** Variables ***
-${var_brand}     Ford
-&{dct_car}       brand=Ford    type=Fiesta    fuel=Diesel
-@{lst_sensors}   Parking    Climate    Seats    Collision
+${brand_var}     Ford
+&{car_dct}       brand=Ford    type=Fiesta    fuel=Diesel
+@{sensors_lst}   Parking    Climate    Seats    Collision
 
 *** Keywords ***
 Show all values in a list    [Arguments]    ${list}
@@ -24,7 +24,7 @@ Show the value in a variable    [Arguments]    ${var}
     
 *** Test Case ***
 Test 1: Display what brand car is tested
-   Show the value in a variable    ${var_brand}
+   Show the value in a variable    ${brand_var}
 
 Test 2: Display list
-   Show all values in a list    ${lst_sensors} 
+   Show all values in a list    ${sensors_lst} 

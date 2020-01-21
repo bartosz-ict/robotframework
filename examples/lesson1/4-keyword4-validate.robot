@@ -1,19 +1,19 @@
 *** Keywords ***
-Example function or keyword   [Arguments]    ${BOOL}
+Scenario for a testcase   [Arguments]    ${boolean}
     [Documentation]    Robot is keyword driven, so every action contains a keyword.
-    ${VALUE}=    Run keyword if    ${BOOL}    Keyword    INPUT 
-    Validate    ${VALUE}
+    ${result}=    Run keyword if    ${boolean}    Fill a Variable    VALIDATED VALUE
+    Validate with expectation   ${result}
 
-Keyword    [Arguments]    ${ARGUMENT}
-    ${VARIABLE}=    Set Variable    ${ARGUMENT}
-    [Return]    ${VARIABLE}
+Fill a variable    [Arguments]    ${argument}
+    ${variable}=    Set Variable    ${argument}
+    [Return]    ${variable}
     
-Validate    [Arguments]    ${INPUT}
-    Should Be True   '${INPUT}' == 'INPUT'    
+Validate with expectation   [Arguments]    ${INPUT}
+    Should Be True   '${INPUT}' == 'VALIDATED VALUE'    
 
 *** Test Cases ***
 Test Case 1  
-    Example function or keyword    True
+    Scenario for a testcase    True
 
-Test Case 2  
-    Example function or keyword    False
+Test Case 2
+    Scenario for a testcase    False

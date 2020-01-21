@@ -6,8 +6,8 @@ Resource    6-resource2-file.resource
 *** Keywords ***
 kw    [Arguments]    ${input}    ${multiplier}    ${result}
     Given value of var <${input}> is present
-    When value of var input is multiplied by "${multiplier}"
-    Then value of var result should be [${result}]
+    When value of var input is multiplied by <${multiplier}>
+    Then value of var result should be <${result}>
 
 *** Test Cases ***
 Testcase 1    kw    1    2    2
