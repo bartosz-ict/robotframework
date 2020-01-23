@@ -7,8 +7,6 @@ Documentation    Robot ondersteund verschillende vormen van validaties, maar Ã©Ã
           ...    2. Leg een 'testresultaat' vast bij een daaropvolgende 
           ...    3. Vergelijk de beide testresultaten met elkaar.
 
-Library    Collections  
-
 Resource   RandomGenerator.resource
    
 *** Test Cases ***

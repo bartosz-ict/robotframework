@@ -4,9 +4,6 @@ Documentation    Bij een random gegenereerde lijst doe het volgende:
 ...              - Bonus: zorg ervoor dat het bestand automatisch wordt opgeruimd
 ...              - Bonus 2: Zorg ervoor dat er max 10 nummers per regel staan
 
-
-Library    Collections  
-
 Resource   RandomGenerator.resource
 
 
