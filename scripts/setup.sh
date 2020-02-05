@@ -49,12 +49,15 @@ apt-get install -y git-core
 git config --global user.name "$GIT_USER_NAME"
 git config --global user.email "$GIT_USER_EMAIL"
  
-
+echo "Nu verder onder osboxes account"
+exit
+cd ~
 echo "Oefeningen naar vm kopieren en git configureren"
 git clone https://github.com/bartosz-ict/robotframework.git 
 mkdir /home/osboxes/workspace
-ln -s /home/osboxes/workspace/RFtraining /home/osboxes/robotframework/RFtraining
+ln -s /home/osboxes/robotframework/RFtraining /home/osboxes/workspace/RFtraining
 chown osboxes:osboxes /home/osboxes -R
+cd robotframework
 git reset --hard
 cp /home/osboxes/robotframework/scripts/demoapp*.desktop /home/osboxes/Desktop
 chmod +x /home/osboxes/Desktop/demoapp*.desktop
@@ -65,4 +68,3 @@ timedatectl set-timezone Europe/Amsterdam
 echo "Handmatige stappen:"
 echo "Open Eclipse en zet de workspace op /home/osboxes/workspace."
 echo "Ga naar Eclipse Marketplace (onder Help) en zoek op Robot Editor en installeer deze plugin"
-
