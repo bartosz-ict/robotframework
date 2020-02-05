@@ -18,4 +18,3 @@ Opdracht3.5.2
     Input Password    m0de
     Submit Credentials
     Welcome Page Should Be Open
-    

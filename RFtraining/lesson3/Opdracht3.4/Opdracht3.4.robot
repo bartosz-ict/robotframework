@@ -12,3 +12,5 @@ Opdracht3.4
     Input Password    mode
     Submit Credentials
     Welcome Page Should Be Open
+    
+# TODO meerdere resource files maken
