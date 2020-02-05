@@ -3,21 +3,21 @@ Documentation    An overview of combining collections in Robot.
 Library    Collections
 
 *** Variables ***
-@{LIST}=    Value 1    Value 2    Value 3    Value 4
+@{list}=    Value 1    Value 2    Value 3    Value 4
 
-&{SUBDICT1}=     Key 1=Item 1    Key 2=Item 2    Key 3=Item 3    
-&{SUBDICT2}=     Sub1=Subvalue1    Sub2=Subvalue2    Sub3=Subvalue3
+&{subDict1}=     Key 1=Item 1    Key 2=Item 2    Key 3=Item 3    
+&{subDict2}=     Sub1=Subvalue1    Sub2=Subvalue2    Sub3=Subvalue3
 
-&{COMBIDICT}=    Combi1=${SUBDICT1}    Combi2=${SUBDICT2}    DictList=${LIST}
-@{COMBILIST}=    ${LIST}    ${SUBDICT1}    ${SUBDICT2}
+&{combiDict}=    Combi1=${SUBDICT1}    Combi2=${subDict2}    DictList=${list}
+@{combiList}=    ${list}    ${subDict1}    ${subDict2}
 
 *** Test Cases ***
-Test with Dictionary containg mixed collections
-    ${DICT}=    Get From Dictionary    ${COMBIDICT}    Combi2
+Test with Dictionary containing mixed collections
+    ${dict}=    Get From Dictionary    ${combiDict}    Combi2
     Log Dictionary    ${DICT}
     
-    ${DICT}=    Get From Dictionary    ${COMBIDICT}    DictList
-    Log List    ${DICT}
+    ${DICT}=    Get From Dictionary    ${combiDict}    DictList
+    Log List    ${dict}
 
 Test with List containing mixed collections
-    Log List    ${COMBILIST}
+    Log List    ${combiList}

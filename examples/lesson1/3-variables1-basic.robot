@@ -2,12 +2,12 @@
 Documentation   Overview of how to combine variables.
 
 *** Variables ***
-${var_brand}=    Lamborghini
-${var_type}=     Countach
+${brand_var}=    Lamborghini
+${type_var}=     Countach
 
-${var_concat}=    ${var_brand} ${var_type}
+${concat_var}=    ${brand_var} ${type_var}
 #Note the '1 space' difference between two variables
 
 *** Test Cases ***
 Test Case 1  
-    Log    ${var_concat}    #Lamborghini Countach as value
+    Log    ${concat_var}    #Lamborghini Countach as value

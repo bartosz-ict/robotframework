@@ -2,17 +2,17 @@
 Library         Collections
 
 *** Variables ***
-@{LIST}         Position 1    Position 2
+@{list}         Position 1    Position 2
 ...             Position 3    Position 4
 
-${COPYLIST}=    ${LIST}
+${copyList}=    ${list}
 
 *** Test Cases ***
 Advanced Verification
-    List should contain value        ${LIST}    Position 2
-    List should not contain value    ${LIST}    Position 5
+    List should contain value        ${list}    Position 2
+    List should not contain value    ${list}    Position 5
     
-    Should contain match             ${LIST}    Position*
-    Should not contain match         ${LIST}    *7*
+    Should contain match             ${list}    Position*
+    Should not contain match         ${list}    *7*
     
-    Lists should be equal            ${LIST}    ${COPYLIST}
+    Lists should be equal            ${list}    ${copyList}

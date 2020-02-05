@@ -2,18 +2,18 @@
 Library         Collections
 
 *** Variables ***
-&{DICTIONARY}   KEY1=Value1   KEY2=Value2    KEY3=Value3
-${VAR1}=    ${DICTIONARY}[KEY1]    #Geeft waarde "Value1"
-${VAR2}=    ${DICTIONARY.KEY1}    #Geeft waarde "Value1"
+&{dictionary}   KeyEntry1=Value1   KeyEntry2=Value2    KeyEntry3=Value3
+${var1}=    ${dictionary}[KeyEntry1]    #Geeft waarde "Value1"
+${var2}=    ${dictionary.KeyEntry1}    #Geeft waarde "Value1"
 
 *** Test Cases ***
 Basic actions for a Dictionary
     ${createDict}=    Create Dictionary    Key4=Value4    Key5=Value5
-    Get Length    ${DICTIONARY}
-    Get Count     ${DICTIONARY}    KEY1
-    ${VALUE}     Get From Dictionary    ${DICTIONARY}    KEY3
+    Get Length    ${dictionary}
+    Get Count     ${dictionary}    KeyEntry1
+    ${value}=     Get From Dictionary    ${dictionary}    KeyEntry3
 
-    ${KEYS}=     Get Dictionary Keys    ${DICTIONARY}
-    ${VALUES}=   Get Dictionary Values  ${DICTIONARY}
-    ${ITEMS}=    Get Dictionary Items   ${DICTIONARY}
-    Log Dictionary    ${DICTIONARY}
+    ${keys}=     Get Dictionary Keys    ${dictionary}
+    ${values}=   Get Dictionary Values  ${dictionary}
+    ${items}=    Get Dictionary Items   ${dictionary}
+    Log Dictionary    ${dictionary}

@@ -3,7 +3,7 @@ ${input}=    ${EMPTY}
 ${result}=    ${EMPTY}
 
 *** Test Cases ***
-Testcase
+Scenario to be executed
     Given value of var <1> is present
     When value of var input is multiplied by "2"
     Then value of var result should be [2]

@@ -11,11 +11,11 @@ Mutate dictionary
     
     ${copyDict}=    Copy Dictionary    ${createDict}
     #Remove a key+value pair from dictionary
-    Remove From Dictionary    ${CreateDict}    Key5
+    Remove From Dictionary    ${createDict}    Key5
     Log Dictionary            ${createDict}
 
     #Delete all item except for the 'kept' item
-    Keep in Dictionary        ${CreateDict}    KEY2
+    Keep in Dictionary        ${createDict}    KEY2
     
-    Log Dictionary            ${CreateDict}
+    Log Dictionary            ${createDict}
     Log Dictionary            ${copyDict}

@@ -3,8 +3,8 @@ Library         Collections
 
 *** Test Cases ***
 Conditional with implicitness
-       ${LIST}=    Create list    True    False
-       FOR  ${entry}    IN    @{LIST}
+       ${list}=    Create list    True    False
+       FOR  ${entry}    IN    @{list}
               Run Keyword If    ${entry}    Log    Deze waarde is True => ${entry}
        END
        
@@ -16,8 +16,8 @@ Conditionals in Robot Test
        END
 
 Conditional with a list
-       ${LIST}=    Create list    string    1234    ${EMPTY}    value4       
-       FOR  ${entry}    IN    @{LIST}
+       ${list}=    Create list    string    1234    ${EMPTY}    value4       
+       FOR  ${entry}    IN    @{list}
               Continue for loop if   '4' in '${entry}'
               Log    Deze waarde bevat niet een 4: ${entry}
        END
