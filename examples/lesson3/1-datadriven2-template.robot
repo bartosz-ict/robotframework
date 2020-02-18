@@ -2,9 +2,9 @@
 Test Template    kw
 
 *** Keywords ***
-kw    [Arguments]    ${USER}    ${PASSWORD}
-    Log    argument1 = ${USER}
-    Log    argument2 = ${PASSWORD}
+kw    [Arguments]    ${user}    ${password}
+    Log    argument1 = ${user}
+    Log    argument2 = ${password}
 
 *** Test Cases ***
 Testcase

@@ -8,6 +8,6 @@ Library         Collections
 *** Test Cases ***
 For Loop Notation Range
     ${max}=    Get Length    ${LIST}
-       FOR    ${entry}    IN RANGE    0    ${max}
-              log    ${entry}
-       END
+    FOR    ${entry}    IN RANGE    0    ${max}
+           log    ${entry}
+    END

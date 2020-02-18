@@ -1,3 +1,6 @@
+*** Settings ***
+Library    Collections
+
 *** Keywords ***
 Random Generator
     ${generateList}=    Create List

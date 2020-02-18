@@ -1,14 +1,14 @@
 *** Keywords ***
-Calculation Keyword   [Arguments]    ${Value}
+Calculation Keyword   [Arguments]    ${value}
     [Documentation]    Robot is keyword driven, so every action contains a keyword.
-    ${Variable}=    Multiply by itself    ${Value} 
+    ${calculation}=    Multiply by itself    ${value} 
     
-    Log    This value has been multiplied: "${variable}"
+    Log    This value has been multiplied: "${calculation}"
 
-Multiply by itself    [Arguments]    ${argument}
-    ${variable}=    evaluate    ${argument}*${argument}
+Multiply by itself    [Arguments]    ${number}
+    ${result}=    evaluate    ${number}*${number}
     
-    [Return]    ${variable}
+    [Return]    ${result}
     
 
 *** Test Cases ***

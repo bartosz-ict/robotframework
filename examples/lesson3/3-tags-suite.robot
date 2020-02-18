@@ -2,9 +2,9 @@
 Force Tags    Login
 
 *** Keywords ***
-kw    [Arguments]    ${USER}    ${PASSWORD}    
-    Log    ${USER}
-    Log    ${PASSWORD}
+kw    [Arguments]    ${user}    ${password}    
+    Log    ${user}
+    Log    ${password}
 
 *** Test Cases ***        
 Valid Testcase      kw    valid       valid

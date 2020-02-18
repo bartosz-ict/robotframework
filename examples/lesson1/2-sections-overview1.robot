@@ -1,8 +1,9 @@
 *** Settings ***
-Documentation   Overview of different sections in Robot Framework.
+Documentation   Overview of different sections (Settings, 
+...             Variables, Keywords and Test Cases) in RF.
 
 *** Variables ***
-${var_brand}     Lada
+${brand_var}     Lada
 
 *** Keywords ***
 Show value of variable in log    [Arguments]    ${value}
@@ -11,6 +12,4 @@ Show value of variable in log    [Arguments]    ${value}
 
 *** Test Cases ***
 Test 1: Show the brand which is tested  
-    Show value of variable in log    ${var_brand}
-
-
+    Show value of variable in log    ${brand_var}

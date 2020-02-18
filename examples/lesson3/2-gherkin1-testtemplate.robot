@@ -6,8 +6,8 @@ Test Template    Execution
 *** Keywords ***
 Execution    [Arguments]    ${input}    ${multiplier}    ${result}
     Given value of var <${input}> is present
-    When value of var input is multiplied by "${multiplier}"
-    Then value of var <result> should be [${result}]
+    When value of var <${input}> is multiplied by <${multiplier}>
+    Then value of var <${result}> should be <${result}>
 
 *** Test Cases ***
 Testcases

@@ -1,7 +1,7 @@
 *** Keywords ***
-kw    [Arguments]    ${USER}    ${PASSWORD}    
-    Log    ${USER}
-    Log    ${PASSWORD}
+kw    [Arguments]    ${user}    ${password}    
+    Log    ${user}
+    Log    ${password}
 
 *** Test Cases ***        
                         #USERNAME    PASSWORD
