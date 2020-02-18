@@ -10,8 +10,8 @@ ${browser}=               chrome
 ${loginnaam}=             demo
 ${correct_wachtwoord}=    mode
 ${foutief_wachtwoord}=    edom
-${welkomstpagina}=        Welcome Page
-${foutpagina}=            Error Page
+${welkomstpagina}=        Welcome Page DEV
+${foutpagina}=            Error Page DEV
 
 *** Test Cases ***
 Log succesvol in

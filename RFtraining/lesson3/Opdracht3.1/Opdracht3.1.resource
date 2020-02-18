@@ -12,4 +12,4 @@ Vul loginnaam en wachtwoord in
     Click Button    login_button
 
 Check dat je login is mislukt
-    Title Should Be    Error Page
+    Title Should Be    Error Page DEV

@@ -43,8 +43,8 @@ Submit Credentials
 
 Welcome Page Should Be Open
     Location Should Be    ${WELCOME URL}
-    Title Should Be    Welcome Page
+    Title Should Be    Welcome Page DEV
 
 Login Should Have Failed
     Location Should Be    ${ERROR URL}
-    Title Should Be    Error Page
+    Title Should Be    Error Page DEV

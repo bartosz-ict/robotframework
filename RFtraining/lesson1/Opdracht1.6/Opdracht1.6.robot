@@ -10,8 +10,8 @@ ${browser}=       chrome
 ${username}=     demo
 ${correct_wachtwoord}=    mode
 ${foutief_wachtwoord}=    edom
-${welkomstpagina}=    Welcome Page
-${foutpagina}=    Error Page
+${welkomstpagina}=    Welcome Page DEV
+${foutpagina}=    Error Page DEV
 
 *** Keywords ***
 ght

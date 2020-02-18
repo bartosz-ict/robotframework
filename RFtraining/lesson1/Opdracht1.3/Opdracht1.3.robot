@@ -12,7 +12,7 @@ Log succesvol in
     Input Text       username_field    demo
     Input Text       password_field    mode
     Click Button     login_button
-    Title Should Be  Welcome Page
+    Title Should Be  Welcome Page DEV
     Close Browser
     
 Log in met een foutief wachtwoord
@@ -20,5 +20,5 @@ Log in met een foutief wachtwoord
     Input Text       username_field    demo
     Input Text       password_field    edom
     Click Button     login_button
-    Title Should Be  Error Page
+    Title Should Be  Error Page DEV
     Close Browser
