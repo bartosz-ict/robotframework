@@ -35,19 +35,24 @@
 
 2. Download en installeer vervolgens de VirtualBox Extension Pack
 
-3. (Optioneel) Wanneer je installeert op een Mac waarop al Mojave is geïnstalleerd, kan de installatie problemen opleveren. De workaround hiervoor vind je hier:
-    * https://www.reddit.com/r/MacOS/comments/bqbowl/virtualbox_installation_fails_on_macos_mojave/
-
-4. Download de Appliance / het ova-bestand
+3. Download de Appliance / het ova-bestand
     * van Sebastiaan's google drive share https://drive.google.com/drive/folders/1BdppzCdDSyEvI4mOXDHhfKHNloUR1m_8?usp=sharing
     * vanaf een aangeleverde USB stick
 
-5. Importeer de appliance met de VirtualBox applicatie
+4. Importeer de appliance met de VirtualBox applicatie
 
-6. Stel de juiste hardware configuratie in om de virtuele pc te versnellen, de advies configuratie:
+5. Stel de juiste hardware configuratie in om de virtuele pc te versnellen, de advies configuratie:
     * Ga naar "Instellingen" -> "Systeem" -> "Moederbord" en zet basis geheugen naar minimaal 4000 MB (Advies: 8000 MB)
     * Ga naar "Instellingen" -> "Systeem" -> "Processor"  en zet het aantal CPU's naar minimaal 2 (Advies: 4 CPU)
     * Ga naar "Instellingen" -> "Beeldscherm" -> "Scherm" en zet het videogeheugen naar minimaal 128 MB (Advies: Zet 3D-acceleratie aan)
 
-7. Start de appliance van de cursus:
+6. Start de appliance van de cursus:
     * log in met gebruiker/wachtwoord ‘osboxes.org’
+
+## Troubleshooting MacOS
+1. Wanneer je installeert op een Mac waarop al Mojave is geïnstalleerd, kan de installatie problemen opleveren. De workaround hiervoor vind je hier:
+    * https://www.reddit.com/r/MacOS/comments/bqbowl/virtualbox_installation_fails_on_macos_mojave/
+
+## Troubleshooting Windows
+1. Wanneer je installeert op een Windows machine dan kan het zijn dat je een melding krijgt dat Hyper-V niet aan staat. De workaround hiervoor vind je op:
+    * https://docs.microsoft.com/en-us/virtualization/hyper-v-on-windows/quick-start/enable-hyper-v
