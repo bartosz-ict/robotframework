@@ -1,5 +1,5 @@
 *** Settings ***
-Resource    resource.robot
+Resource    Opdracht3.4.resource
 Documentation    Naast de demo-omgeving DEV (port 7272) is er ook een op TEST (port 2727) 
 ...    Pas onderstaande test zo aan, dat je deze op beide omgevingen kan draaien m.b.v. omgevingsbestanden.
 ...    (maak gebruik van de elementen waarin deze omgevingen van elkaar verschillen)
