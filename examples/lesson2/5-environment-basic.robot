@@ -1,5 +1,5 @@
 *** Settings ***
-resource    4-environment-${env}.resource
+resource    5-environment-${env}.resource
 
 *** Test cases ***
 Environment Test

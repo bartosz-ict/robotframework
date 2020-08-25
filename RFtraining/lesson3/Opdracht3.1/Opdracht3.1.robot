@@ -1,13 +1,10 @@
-*** Settings ***
-Documentation    Gegeven onderstaande test. Maak een data-driven test op basis van onderstaande test waarmee je
-...    makkelijk verschillende foutieve logins kan testen. 
-...    Hint: Maak een keyword van de test en maak van de dingen die je wil variëren een variabele.
+*** Settings ***  
+Documentation    Gegegeven een lijst met auto namen, doe er de volgende dingen mee:
+...              Loop door de lijst en print van elke auto de naam 
+...              Bonus: sorteer de lijst in omgekeerde volgorde en print de naam van elke auto
 
-Resource    Opdracht3.1.resource    
+*** Variables ***
+@{Lijst met auto's}    Mazda-3    Ford Focus    Honda Civic    Range Rover Sport     Range Rover E-Sport    Honda Civic Hybrid    Ford Focus ST
 
 *** Test Cases ***
-Log in met een foutief wachtwoord
-    Open de login pagina
-    Vul loginnaam en wachtwoord in    demo    edom
-    Check dat je login is mislukt
-    Close Browser
+Opdracht3.1

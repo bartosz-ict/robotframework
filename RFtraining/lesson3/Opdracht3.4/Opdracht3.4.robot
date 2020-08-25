@@ -1,21 +1,19 @@
 *** Settings ***
-Resource    Opdracht3.4.resource
-Documentation    Naast de demo-omgeving DEV (port 7272) is er ook een op TEST (port 2727) 
-...    Pas onderstaande test zo aan, dat je deze op beide omgevingen kan draaien m.b.v. omgevingsbestanden.
-...    (maak gebruik van de elementen waarin deze omgevingen van elkaar verschillen)
+Documentation    Herschrijf het eerdere testgeval naar een Gherkin / Datadriven testgeval combinatie.
+...    
+Resource    Opdracht3.4.resource    
 
 *** Test Cases ***
-Opdracht3.4.1
-    Open Browser To Login Page
-    Input Username    demo
-    Input Password    mode
-    Submit Credentials
-    Welcome Page Should Be Open
-    
-
-Opdracht3.4.2
-    Open Browser To Login Page
-    Input Username    demo
-    Input Password    m0de
-    Submit Credentials
-    Login Should Have Failed
+Opdracht3.4
+    [Template]    Log in met een foutief wachtwoord
+    # user      # password
+    demo        ${EMPTY}
+    ${EMPTY}    ${EMPTY}
+        
+*** Keyword ***
+Log in met een foutief wachtwoord
+    [Arguments]    ${user}    ${password}
+    Open de login pagina
+    Vul loginnaam en wachtwoord in    ${user}    ${password}
+    Check dat je login is mislukt
+    Close Browser
