@@ -5,7 +5,7 @@ Documentation    Bij een random gegenereerde lijst doe het volgende:
 ...              - Stop met zoeken zodra de verwachte waarde is gevonden
 ...              - Bonus: Zoek uit met welk keyword je het bovenstaande in één keer kan doen
 
-Resource   RandomGenerator.resource
+Resource   Resources/RandomGenerator.resource
 
 *** Test Cases ***
 

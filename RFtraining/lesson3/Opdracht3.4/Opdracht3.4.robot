@@ -1,7 +1,7 @@
 *** Settings ***
 Documentation    Herschrijf het eerdere testgeval naar een Gherkin / Datadriven testgeval combinatie.
 ...    
-Resource    Opdracht3.4.resource    
+Resource    Resources/Opdracht3.4.resource    
 
 *** Test Cases ***
 Opdracht3.4

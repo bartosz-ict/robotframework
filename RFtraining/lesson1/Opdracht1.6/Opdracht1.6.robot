@@ -13,6 +13,11 @@ ${foutief_wachtwoord}=    edom
 ${welkomstpagina}=    Welcome Page DEV
 ${foutpagina}=    Error Page DEV
 
+*** Test Cases ***
+Log succesvol in    ght
+    
+Log in met een foutief wachtwoord    ghf
+    
 *** Keywords ***
 ght
     Given browser of <${browser}> opens the correct url <${url}>
@@ -43,8 +48,3 @@ verify that user has failed to logged in
     
 browser is closed
     Close Browser
-
-*** Test Cases ***
-Log succesvol in    ght
-    
-Log in met een foutief wachtwoord    ghf

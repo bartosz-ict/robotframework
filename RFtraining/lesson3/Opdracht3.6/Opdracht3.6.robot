@@ -4,7 +4,7 @@ Documentation    De suite bevat twee testen, waarbij de tweede test in eerste in
 ...              Fix daarna de tweede test.
 ...              Bonus: gebruik een suite setup/teardown om hetzelfde te bereiken.
 
-Resource    Opdracht3.6.resource
+Resource    Resources/Opdracht3.6.resource
 
 *** Test Cases ***
 Opdracht3.6.1

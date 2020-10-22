@@ -3,7 +3,7 @@ Documentation    Gegeven onderstaande test. Maak een data-driven test op basis v
 ...    makkelijk verschillende foutieve logins kan testen. 
 ...    Hint: Maak een keyword van de test en maak van de dingen die je wil variëren een variabele.
 
-Resource    Opdracht3.3.resource    
+Resource    Resources/Opdracht3.3.resource    
 
 *** Test Cases ***
 Log in met een foutief wachtwoord
