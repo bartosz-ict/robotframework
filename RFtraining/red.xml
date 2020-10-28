@@ -2,7 +2,7 @@
 <projectConfiguration>
     <configVersion>2</configVersion>
     <relativeTo>WORKSPACE</relativeTo>
-    <referencedLibrary type="PYTHON" name="SeleniumLibrary" path="/usr/local/lib/python3.7/dist-packages/SeleniumLibrary/__init__.py"/>
+    <referencedLibrary type="PYTHON" name="SeleniumLibrary" path="/usr/local/lib/python3.8/dist-packages/SeleniumLibrary/__init__.py" dynamic="false"/>
     <pythonpath/>
     <classpath/>
     <excludedForValidation/>
