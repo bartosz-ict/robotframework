@@ -19,4 +19,4 @@ More List Actions
     Sort List           ${combination}
     Log List            ${combination}
     
-    Remove Duplicates   ${combination}
+    ${noDuplicate}=    Remove Duplicates   ${combination}
