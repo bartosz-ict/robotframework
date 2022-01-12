@@ -7,8 +7,10 @@ Library         OperatingSystem
 
 *** Test Cases ***
 Store a list as a file
-       FOR    ${entry}    IN    @{objects_lst}
-              Append To File    ${CURDIR}${/}Result    ${entry}\n
-       END
+       Append To File    ${CURDIR}${/}Result    ${object_lst}[0]\n
+       Append To File    ${CURDIR}${/}Result    ${object_lst}[1]\n
+       Append To File    ${CURDIR}${/}Result    ${object_lst}[2]\n
+       Append To File    ${CURDIR}${/}Result    ${object_lst}[3]\n
+       
 
     

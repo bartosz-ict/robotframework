@@ -3,7 +3,7 @@ Library         Collections
 Library         OperatingSystem
 
 *** Variables ***
-@{list}=    Items    Materials    Objects    Stuff
+@{object_lst}=    Items    Materials    Objects    Stuff
 
 ${Expected}=    ${CURDIR}${/}Expected.csv
 ${Actual}=      ${CURDIR}${/}Actual.csv
@@ -17,7 +17,8 @@ Compare Expected and Actual
 
 *** Test Cases ***
 Store a list as a file and compare expectation
-       FOR    ${entry}    IN    @{list}
-              Append To File    ${Actual}    ${entry}\n
-       END
+       Append To File    ${CURDIR}${/}Result    ${object_lst}[0]\n
+       Append To File    ${CURDIR}${/}Result    ${object_lst}[1]\n
+       Append To File    ${CURDIR}${/}Result    ${object_lst}[2]\n
+       Append To File    ${CURDIR}${/}Result    ${object_lst}[3]\n
        Compare Expected and Actual    ${Expected}    ${Actual}
