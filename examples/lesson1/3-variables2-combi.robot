@@ -10,3 +10,4 @@ ${Lamborghini-Countach}=    Oldtimer
 *** Test Cases ***
 Test Case 1  
     Log    ${${brand_var}-${type_var}}    #Oldtimer as value
+    
