@@ -1,0 +1,8 @@
+{
+    "robotcode.robot.variables": {
+        "env":"dev"
+    },
+"robotcode.robot.args": [
+        "-A", "argument.ini"
+    ]
+}

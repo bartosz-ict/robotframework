@@ -36,12 +36,12 @@ Drive your car from <${here}> to <${there}>
     log    Destination: ${there}
 
 *** Test Cases ***
-Test Case 1: Drive from Home to Work
+Test Case 1 - Drive from Home to Work
     [Documentation]    Verify the route to work from home. 
     [Tags]             Home-Work    Regression    Low
     Drive your car from <Home> to <Work>
 
-Test Case 2: Drive from Work to Home 
+Test Case 2 - Drive from Work to Home 
     [Documentation]    Verify the route to work from home.
     [Tags]             Work-Home    Non-functional    High
     Drive your car from <Work> to <Home>

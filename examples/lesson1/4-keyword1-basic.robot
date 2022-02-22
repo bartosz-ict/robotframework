@@ -12,8 +12,8 @@ Set status backup camera    [Arguments]    ${gear}
     [Return]    ${status}
 
 *** Test Cases ***
-Test Case 1: Turn on camera when reversing    
+Test Case 1 - Turn on camera when reversing    
     Set gear    Reverse
 
-Test Case 2: Turn off camera not reversing
+Test Case 2 - Turn off camera not reversing
     Set gear    Gear 1

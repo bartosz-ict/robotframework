@@ -19,5 +19,5 @@ value of var input is multiplied by "${multiplier}"
     log    ${input} * ${multiplier} = ${result}
 
 value of var result should be [${expected}]
+    ${expected}=    Convert To Integer    ${expected}
     Should Be Equal    ${result}    ${expected}
-

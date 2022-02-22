@@ -23,8 +23,8 @@ Show the value in a variable    [Arguments]    ${var}
     Log    The variable value '${var}' is the content.
     
 *** Test Case ***
-Test 1: Display what brand car is tested
+Test 1 - Display what brand car is tested
    Show the value in a variable    ${brand_var}
 
-Test 2: Display list
+Test 2 - Display list
    Show all values in a list    ${sensors_lst} 

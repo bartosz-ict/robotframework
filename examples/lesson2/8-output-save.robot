@@ -7,10 +7,10 @@ Library         OperatingSystem
 
 *** Test Cases ***
 Store a list as a file
-       Append To File    ${CURDIR}${/}Result    ${object_lst}[0]\n
-       Append To File    ${CURDIR}${/}Result    ${object_lst}[1]\n
-       Append To File    ${CURDIR}${/}Result    ${object_lst}[2]\n
-       Append To File    ${CURDIR}${/}Result    ${object_lst}[3]\n
+       Append To File    ${CURDIR}${/}Result    ${objects_lst}[0]\n
+       Append To File    ${CURDIR}${/}Result    ${objects_lst}[1]\n
+       Append To File    ${CURDIR}${/}Result    ${objects_lst}[2]\n
+       Append To File    ${CURDIR}${/}Result    ${objects_lst}[3]\n
        
 
     

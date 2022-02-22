@@ -11,5 +11,5 @@ Show value of variable in log    [Arguments]    ${value}
     log    ${value}
 
 *** Test Cases ***
-Test 1: Show the brand which is tested  
+Test 1 - Show the brand which is tested  
     Show value of variable in log    ${brand_var}
