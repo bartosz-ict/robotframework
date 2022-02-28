@@ -1,7 +1,3 @@
-*** Variables ***
-${input}=    ${EMPTY}
-${result}=    ${EMPTY}
-
 *** Test Cases ***
 Scenario to be executed
     Given value of var <1> is present

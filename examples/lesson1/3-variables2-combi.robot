@@ -5,9 +5,9 @@ Documentation   Overview of how to combine variables to a new result
 ${brand_var}=    Lamborghini
 ${type_var}=     Countach
 
-${Lamborghini-Countach}=    Oldtimer
+${Lamborghini_Countach}=    Oldtimer
 
 *** Test Cases ***
 Test Case 1  
-    Log    ${${brand_var}-${type_var}}    #Oldtimer as value
+    Log    ${${brand_var}_${type_var}}    #Oldtimer as value
     

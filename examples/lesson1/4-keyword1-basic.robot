@@ -5,10 +5,12 @@ Set gear    [Arguments]    ${gear}
     Log    ${resultCamera}
     
 Set status backup camera    [Arguments]    ${gear}
-    [Documentation]    Returns status of camera based on reverse gear input or not.
-    ${status}=    Set Variable if
-                       ...    '${gear}' == 'Reverse'    Camera is On
-                       ...    '${gear}' != 'Reverse'    Camera is Off
+    [Documentation]    Returns status of camera based on reverse gear input or not.   
+    IF  '${gear}'=='Reverse'    
+        ${status}=    Set Variable    Camera is On
+    ELSE
+        ${status}=    Set Variable    Camera is Off
+    END
     [Return]    ${status}
 
 *** Test Cases ***

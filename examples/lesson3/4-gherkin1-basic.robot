@@ -1,7 +1,3 @@
-*** Variables ***
-${input}=    ${EMPTY}
-${result}=    ${EMPTY}
-
 *** Keywords ***
 kw    [Arguments]    ${input}    ${multiplier}    ${result}
     Given value of var <${input}> is present

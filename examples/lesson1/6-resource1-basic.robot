@@ -1,6 +1,5 @@
 *** Settings ***
 Documentation    An example to show how a resource file can be imported and used.
-
 Resource    6-resource2-file.resource
 
 *** Keywords ***
