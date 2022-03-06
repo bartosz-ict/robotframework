@@ -12,4 +12,4 @@ Library    OperatingSystem
 @{voorbeeldlijst}    Lorem    ipsum    dolor    sit    amet    consectetur    adipisicing    elit    sed    do    eiusmod    tempor    incididunt    ut    labore    et    dolore    magna    aliqua
    
 *** Test Cases ***
-Opdracht2.5
+Opdracht3.7

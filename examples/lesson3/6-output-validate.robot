@@ -17,8 +17,7 @@ Compare Expected and Actual
 
 *** Test Cases ***
 Store a list as a file and compare expectation
-       Append To File    ${CURDIR}${/}Actual.csv    ${objects_lst}[0]\n
-       Append To File    ${CURDIR}${/}Actual.csv    ${objects_lst}[1]\n
-       Append To File    ${CURDIR}${/}Actual.csv    ${objects_lst}[2]\n
-       Append To File    ${CURDIR}${/}Actual.csv    ${objects_lst}[3]\n
-       Compare Expected and Actual    ${Expected}    ${Actual}
+    FOR  ${item}  IN  @{objects_lst}
+        Append To File    ${CURDIR}${/}Actual.csv    ${item}\n
+    END
+    Compare Expected and Actual    ${Expected}    ${Actual}

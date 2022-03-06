@@ -17,6 +17,7 @@ value of var result should be <${expected}>
     Should Be Equal    ${result}    ${expected}
 
 *** Test Cases ***
-Testcase 1    kw    1    2    2
-Testcase 2    kw    2    2    4
-Testcase 3    kw    4    4    16
+                    #INPUT    MULTI    RESULT
+Testcase 1    kw       1        2        2
+Testcase 2    kw       2        2        4
+Testcase 3    kw       4        4        16

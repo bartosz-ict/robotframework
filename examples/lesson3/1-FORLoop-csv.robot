@@ -8,17 +8,14 @@ Library         Collections
 @{row-3}      R3-Pos1    R3-Pos2    R3-Pos3    R3-Pos3    R3-Pos4
 
 *** Keywords ***
-Read csv Rows    [Arguments]    ${row}
-    FOR    ${entry}    IN    @{row}
-         Log    entry: ${entry}
-    END
-
-Read csv Body    [Arguments]    ${body}
+Read csv   [Arguments]    ${body}
     FOR    ${row}    IN    @{body}
-         Log    Body: ${row}
-         Read csv Rows    ${row}
+        Log    Row: ${row}
+        FOR    ${entry}    IN    @{row}
+            Log    Column: ${entry}
+        END
     END
 
 *** Test Cases ***
 Read CSV file
-       Read csv body    ${csv}
+       Read csv    ${csv}

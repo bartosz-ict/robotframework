@@ -6,8 +6,8 @@ Documentation    Gegeven de lijsten ${lijst één met auto's} en ${lijst twee me
 Library    Collections    
 
 *** Variables ***
-@{lijst één met auto's}      Mazda-3     BMW 1     Fiat Multipla    Volkswagen Polo
-@{lijst twee met auto's}    Audi A3     Mazda-3    Opel Crossland X    Ford Focus
+@{lijst_één_met_auto's}      Mazda-3     BMW 1     Fiat Multipla    Volkswagen Polo
+@{lijst_twee_met_auto's}    Audi A3     Mazda-3    Opel Crossland X    Ford Focus
 
 *** Test Cases ***
 Opdracht2.1b

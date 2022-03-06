@@ -1,5 +1,5 @@
 *** Settings ***
-Resource        2-gherkin1-testtemplate.resource
+Resource        4-gherkin1-testtemplate.resource
 
 Test Template    Execution
 
