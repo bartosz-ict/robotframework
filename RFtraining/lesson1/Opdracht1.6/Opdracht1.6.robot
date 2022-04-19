@@ -1,8 +1,8 @@
 *** Settings ***
 Documentation    Zorg ervoor dat alleen de gegevens specifiek voor het testgeval blijft staan.
-          ...    Verplaats niet noodzakelijke gegevens naar een extern 'resource' bestand.
-
+...              Verplaats niet noodzakelijke gegevens naar een extern 'resource' bestand.
 Library    SeleniumLibrary
+
 
 *** Variables ***
 ${url}=           http://localhost:7272
@@ -13,11 +13,13 @@ ${foutief_wachtwoord}=    edom
 ${welkomstpagina}=    Welcome Page DEV
 ${foutpagina}=    Error Page DEV
 
+
 *** Test Cases ***
 Log succesvol in    ght
-    
+
 Log in met een foutief wachtwoord    ghf
-    
+
+
 *** Keywords ***
 ght
     Given browser of <${browser}> opens the correct url <${url}>
@@ -42,9 +44,9 @@ login name <${name}> and password <${password}> are submitted by user
 
 verify that user is succesfully logged in
     Title Should Be    ${welkomstpagina}
-    
+
 verify that user has failed to logged in
     Title Should Be    ${foutpagina}
-    
+
 browser is closed
     Close Browser

@@ -4,8 +4,8 @@ Documentation    Bij een random gegenereerde lijst doe het volgende:
 ...              - Kies een nummer en kijk op welke positie deze staat
 ...              - Stop met zoeken zodra de verwachte waarde is gevonden
 ...              - Bonus: Zoek uit met welk keyword je het bovenstaande in één keer kan doen
-
 Resource   Resources/RandomGenerator.resource
+
 
 *** Test Cases ***
 
@@ -13,5 +13,5 @@ Resource   Resources/RandomGenerator.resource
 *** Keywords ***
 This keyword returns random numbers
     ${ReturnedList} =    Random Generator
-    Log list    ${ReturnedList}
+    Log List    ${ReturnedList}
     [Return]    ${ReturnedList}

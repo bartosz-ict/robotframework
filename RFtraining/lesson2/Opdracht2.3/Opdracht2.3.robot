@@ -4,6 +4,7 @@ Documentation    Naast de demo-omgeving DEV (port 7272) is er ook een op TEST (p
 ...    Pas onderstaande test zo aan, dat je deze op beide omgevingen kan draaien m.b.v. omgevingsbestanden.
 ...    (maak gebruik van de elementen waarin deze omgevingen van elkaar verschillen)
 
+
 *** Test Cases ***
 Opdracht2.3.1
     Open Browser To Login Page
@@ -12,7 +13,6 @@ Opdracht2.3.1
     Submit Credentials
     Welcome Page Should Be Open
     
-
 Opdracht2.3.2
     Open Browser To Login Page
     Input Username    demo

@@ -1,7 +1,7 @@
 *** Settings ***
 Documentation    Herschrijf het eerdere testgeval naar een Gherkin / Datadriven testgeval combinatie.
-...    
 Resource    Resources/Opdracht3.4.resource    
+
 
 *** Test Cases ***
 Opdracht3.4
@@ -9,7 +9,8 @@ Opdracht3.4
     # user      # password
     demo        ${EMPTY}
     ${EMPTY}    ${EMPTY}
-        
+
+
 *** Keyword ***
 Log in met een foutief wachtwoord
     [Arguments]    ${user}    ${password}

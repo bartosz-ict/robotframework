@@ -3,8 +3,8 @@ Documentation    De suite bevat twee testen, waarbij de tweede test in eerste in
 ...              Zorg er eerst voor dat de browser altijd wordt afgesloten, ook als de test faalt. 
 ...              Fix daarna de tweede test.
 ...              Bonus: gebruik een suite setup/teardown om hetzelfde te bereiken.
-
 Resource    Resources/Opdracht3.5.resource
+
 
 *** Test Cases ***
 Opdracht3.5.1
@@ -13,7 +13,7 @@ Opdracht3.5.1
     Input Password    mode
     Submit Credentials
     Welcome Page Should Be Open
-    
+
 Opdracht3.5.2
     Open Browser To Login Page
     Input Username    demo

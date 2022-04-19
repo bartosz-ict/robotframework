@@ -6,6 +6,7 @@ Documentation     A resource file with reusable keywords and variables.
 ...               by the imported SeleniumLibrary.
 Library           SeleniumLibrary
 
+
 *** Variables ***
 ${SERVER}         localhost:7272
 ${BROWSER}        Firefox

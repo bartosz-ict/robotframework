@@ -1,8 +1,8 @@
-*** Settings ***  
+*** Settings ***
 Documentation    Om je tests onderhoudbaar te houden, kun je keywords maken van (delen van) tests die je in meerdere testgevallen gebruikt.
-          ...    Pas dit toe bij de testgevallen uit de eerdere opdracht.
+...              Pas dit toe bij de testgevallen uit de eerdere opdracht.
+Library    SeleniumLibrary
 
-Library    SeleniumLibrary    
 
 *** Variables ***
 ${url}=                   http://localhost:7272
@@ -12,6 +12,7 @@ ${correct_wachtwoord}=    mode
 ${foutief_wachtwoord}=    edom
 ${welkomstpagina}=        Welcome Page DEV
 ${foutpagina}=            Error Page DEV
+
 
 *** Test Cases ***
 Log succesvol in
@@ -29,5 +30,6 @@ Log in met een foutief wachtwoord
     Click Button     login_button
     Title Should Be  ${foutpagina}
     Close Browser
-    
+
+
 *** Keywords ***
