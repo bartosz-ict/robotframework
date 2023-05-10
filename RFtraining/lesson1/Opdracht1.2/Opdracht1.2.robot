@@ -10,6 +10,9 @@ Documentation    Start voor deze test de DemoApp. Open hiervoor de folder demoap
           ...    - Wachtwoord invult​
           ...    - Op inlogbutton klikt​
           ...    
+          ...    Op deze pagina staan de keywords van de Browser library beschreven:
+          ...    https://marketsquare.github.io/robotframework-browser/Browser.html
+          ...    
           ...    Enkele hints voor een aantal stappen:
           ...     - Input tekst in text veld -> Gebruik bij tekstvak het element 'username_field'
           ...     - Input password in veld   -> Gebruik bij password het element 'password_field'
@@ -23,3 +26,4 @@ Library    Browser
 
 
 *** Test Cases ***
+Opdracht1.2
