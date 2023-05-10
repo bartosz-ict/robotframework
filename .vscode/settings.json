@@ -1,0 +1,18 @@
+{
+    "robot.variables": {
+        "env":"dev",
+    },
+    "launch": {
+        "configurations": [
+            {
+                "type": "robotframework-lsp",
+                "name": "Robot Framework: Launch template",
+                "request": "launch",
+                "cwd": "${workspaceFolder}",
+                "target": "${file}",
+                "terminal": "integrated",
+                "args": ["--argumentfile", "${workspaceFolder}/arguments.ini"]
+            }
+        ],
+    }
+}

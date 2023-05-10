@@ -1,24 +1,13 @@
-*** Settings ***
-Documentation    De suite bevat twee testen, waarbij de tweede test in eerste instantie zal falen.
-...              Zorg er eerst voor dat de browser altijd wordt afgesloten, ook als de test faalt. 
-...              Fix daarna de tweede test.
-...              Bonus: gebruik een suite setup/teardown om hetzelfde te bereiken.
+*** Settings ***  
+Documentation    Bij een random gegenereerde lijst doe het volgende:
+...              - Schrijf de voorbeeldlijst naar een .csv bestand.
+...              - Bonus: zorg ervoor dat het bestand automatisch wordt opgeruimd
+...              - Bonus 2: Zorg ervoor dat er max 10 woorden per regel staan
+Library    OperatingSystem
 
-Resource    Resources/Opdracht3.6.resource
+*** Variables ***
+@{voorbeeldlijst}    Lorem    ipsum    dolor    sit    amet    consectetur    adipisicing    elit    sed    do    eiusmod    tempor    incididunt    ut    labore    et    dolore    magna    aliqua
 
 *** Test Cases ***
-Opdracht3.6.1
-    Open Browser To Login Page
-    Input Username    demo
-    Input Password    mode
-    Submit Credentials
-    Welcome Page Should Be Open
-    
-Opdracht3.6.2
-    Open Browser To Login Page
-    Input Username    demo
-    Input Password    m0de
-    Submit Credentials
-    Welcome Page Should Be Open
-
+Opdracht3.6
 

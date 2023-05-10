@@ -1,18 +1,17 @@
 *** Settings ***
-Documentation    Voeg tags toe aan de testsuite, 
-...    gebruik deze om een aantal testgevallen uit te voeren.
-...    - inclusief
-...    - exclusief
+Documentation    Opdracht 3.5A:​
+...              Maak gebruik van Suite Setup / Teardown om het klaarzetten en opruimen van je testgevallen
+...              efficiënter te maken
+...              Opdracht 3.5B
+...              Maak gebruik van Test Setup / Teardown in je testgevallen om enkele handelingen
+...              'per testgeval' uit te voeren
+
+
+Resource    Resources/Opdracht3.5.resource    
 
 *** Test Cases ***
-Opdracht3.5a
-    Log    ${TEST_NAME}
-
-Opdracht3.5b
-    Log    ${TEST_NAME}    
-
-Opdracht3.5c
-    Log    ${TEST_NAME}    
-
-Opdracht3.5d
-    Log    ${TEST_NAME}
+Log in met een foutief wachtwoord
+    Open de login pagina
+    Vul loginnaam en wachtwoord in    demo    edom
+    Check dat je login is mislukt
+    Close Browser

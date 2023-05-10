@@ -1,11 +1,13 @@
 *** Settings ***
-Documentation   Maak een dictionary met meerdere key-value paren(thema: auto's) en doe de volgende dingen ermee:
-...    - Voeg een key-value paar toe
-...    - Verwijder een key-value paar
-...    - Lees en verifieer de value van een key uit
-...    - Bonus: Toon aan dat de dictionary niet leeg is     
+Documentation   Opdracht met Dictionaries:
+         ...    - Voeg een (key-value) item toe
+         ...    - Verwijder een (key-value) item
+         ...    - Lees één waarde uit
+         ...    Bonus:
+         ...    - Toon aan dat een dictionary een waarde bevat 
 
 Library    Collections    
+
 
 *** Variables ***
 

@@ -1,12 +1,12 @@
 *** Settings ***  
-Documentation    Om je tests onderhoudbaar te houden, kun je keywords maken van (delen van) tests die je in meerdere testgevallen gebruikt.
+Documentation    Zorg dat een aantal stappen in je testgeval door functies / keywords worden uitgevoerd.
           ...    Pas dit toe bij de testgevallen uit de eerdere opdracht.
 
-Library    SeleniumLibrary    
+Library    Browser    
 
 *** Variables ***
 ${url}=                   http://localhost:7272
-${browser}=               chrome
+${browser}=               chromium
 ${loginnaam}=             demo
 ${correct_wachtwoord}=    mode
 ${foutief_wachtwoord}=    edom
@@ -16,18 +16,18 @@ ${foutpagina}=            Error Page DEV
 *** Test Cases ***
 Log succesvol in
     Open Browser     ${url}    ${browser}
-    Input Text       username_field    ${loginnaam}
-    Input Text       password_field    ${correct_wachtwoord}
-    Click Button     login_button
-    Title Should Be  ${welkomstpagina}
+    Type Text       id=username_field    ${loginnaam}
+    Type Secret       id=password_field    $correct_wachtwoord
+    Click     id=login_button
+    Get Title    ==  ${welkomstpagina}
     Close Browser
     
 Log in met een foutief wachtwoord
     Open Browser     ${url}    ${browser}
-    Input Text       username_field    ${loginnaam}
-    Input Text       password_field    ${foutief_wachtwoord}
-    Click Button     login_button
-    Title Should Be  ${foutpagina}
+    Type Text       id=username_field    ${loginnaam}
+    Type Secret       id=password_field    $foutief_wachtwoord
+    Click     id=login_button
+    Get Title    ==  ${foutpagina}
     Close Browser
     
 *** Keywords ***

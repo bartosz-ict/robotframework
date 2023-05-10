@@ -1,12 +1,13 @@
 *** Settings ***
-Documentation    Zorg ervoor dat alleen de gegevens specifiek voor het testgeval blijft staan.
-          ...    Verplaats niet noodzakelijke gegevens naar een extern 'resource' bestand.
+Documentation    Verplaats alle keywords, libraries en variabelen uit je test suite naar resource bestand(en).
+           ...   Importeer één of meerdere resource bestanden om testsuite weer te laten werken.​
 
-Library    SeleniumLibrary
+Library    Browser
+
 
 *** Variables ***
 ${url}=           http://localhost:7272
-${browser}=       chrome
+${browser}=       chromium
 ${username}=     demo
 ${correct_wachtwoord}=    mode
 ${foutief_wachtwoord}=    edom
@@ -36,15 +37,15 @@ browser of <${type}> opens the correct url <${url}>
     Open Browser    ${url}    ${type}
 
 login name <${name}> and password <${password}> are submitted by user
-    Input Text    username_field    ${name}
-    Input Text    password_field    ${password}
-    Click Button    login_button
+    Type Text    id=username_field    ${name}
+    Type Secret    id=password_field    $password
+    Click    id=login_button
 
 verify that user is succesfully logged in
-    Title Should Be    ${welkomstpagina}
+    Get Title    ==    ${welkomstpagina}
     
 verify that user has failed to logged in
-    Title Should Be    ${foutpagina}
+    Get Title    ==    ${foutpagina}
     
 browser is closed
     Close Browser
