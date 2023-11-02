@@ -8,6 +8,7 @@ Documentation    Bij een random gegenereerde lijst doe het volgende:
 Resource   Resources/RandomGenerator.resource
 
 *** Test Cases ***
+Opdracht3.2
 
 
 *** Keywords ***

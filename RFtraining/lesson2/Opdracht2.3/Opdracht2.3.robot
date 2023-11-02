@@ -1,8 +1,10 @@
 *** Settings ***
 Resource    Resources/Opdracht2.3.resource
 Documentation    Naast de demo-omgeving DEV (port 7272) is er ook een op TEST (port 2727) 
-...    Pas onderstaande test zo aan, dat je deze op beide omgevingen kan draaien m.b.v. omgevingsbestanden.
-...    (maak gebruik van de elementen waarin deze omgevingen van elkaar verschillen)
+          ...    Creëer 2 resource bestanden, elk voor een aparte omgeving.
+          ...    Vul een ‘tijdelijke’ placeholder in settings.json voor validaties
+          ...    Run de testgevallen voor beide omgevingen met een argument file
+
 
 *** Test Cases ***
 Opdracht2.3.1

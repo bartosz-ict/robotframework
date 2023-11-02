@@ -1,9 +1,12 @@
 *** Settings ***
-Documentation    Gegeven de lijsten ${lijst één met auto's} en ${lijst twee met auto's}. Doe de volgende dingen met de lijst:
-...    - Voeg de 2 lijsten samen
-...    - Verwijder de dubbele items
-...    - Verifieer of de lijst ontdubbeld is
+Documentation    Opdracht B:
+         ...     - Gegeven twee lijsten
+         ...     - Combineer beide lijsten
+         ...     - Ontdubbel de waarden
+         ...     - Verifieer je resultaat
+
 Library    Collections    
+
 
 *** Variables ***
 @{lijst één met auto's}      Mazda-3     BMW 1     Fiat Multipla    Volkswagen Polo

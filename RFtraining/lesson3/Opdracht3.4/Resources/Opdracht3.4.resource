@@ -1,15 +1,15 @@
 *** Settings ***
-Library    SeleniumLibrary
+Library    Browser
 
 *** Keywords ***
 Open de login pagina
-    Open Browser    http://localhost:7272    chrome
+    Open Browser    http://localhost:7272
 
 Vul loginnaam en wachtwoord in
     [Arguments]    ${login}    ${wachtwoord}
-    Input Text    username_field    ${login}
-    Input Text    password_field    ${wachtwoord}
-    Click Button    login_button
+    Type Text    id=username_field    ${login}
+    Type Secret    id=password_field    $wachtwoord
+    Click    id=login_button
 
 Check dat je login is mislukt
-    Title Should Be    Error Page DEV
+    Get Title    ==    Error Page DEV

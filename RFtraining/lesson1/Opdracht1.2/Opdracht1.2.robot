@@ -1,7 +1,17 @@
 *** Settings ***
-Documentation    Start voor deze test de DemoApp door middel van de shortcut DemoAppDEV op je desktop.
+Documentation    Start voor deze test de DemoApp. Open hiervoor de folder demoapp_dev in een command prompt
+          ...    en run: python server.py
           ...    Op http://localhost:7272 draait nu een webpagina waarop je kunt inloggen. 
           ...    Maak een test waarmee je succesvol inlogt of één waar het inloggen faalt.
+          ...    
+          ...    Voer een script uit waarmee je:​
+          ...    - Een browser opent​
+          ...    - Usernaam invult​
+          ...    - Wachtwoord invult​
+          ...    - Op inlogbutton klikt​
+          ...    
+          ...    Op deze pagina staan de keywords van de Browser library beschreven:
+          ...    https://marketsquare.github.io/robotframework-browser/Browser.html
           ...    
           ...    Enkele hints voor een aantal stappen:
           ...     - Input tekst in text veld -> Gebruik bij tekstvak het element 'username_field'
@@ -12,6 +22,8 @@ Documentation    Start voor deze test de DemoApp door middel van de shortcut Dem
           ...     - Username: demo
           ...     - Password: mode
       
-Library    SeleniumLibrary
+Library    Browser
+
 
 *** Test Cases ***
+Opdracht1.2

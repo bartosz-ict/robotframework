@@ -1,7 +1,7 @@
 *** Settings ***
-Documentation    Gegeven onderstaande test. Maak een data-driven test op basis van onderstaande test waarmee je
-...    makkelijk verschillende foutieve logins kan testen. 
-...    Hint: Maak een keyword van de test en maak van de dingen die je wil variëren een variabele.
+Documentation    Gegeven onderstaande test. Herschrijf één testgeval zodat deze gebruikt maakt van de 
+...              Testtemplate functionaliteit in Robot.
+...              Hint: Maak een keyword van de test en maak van de dingen die je wil variëren een variabele.
 
 Resource    Resources/Opdracht3.3.resource    
 

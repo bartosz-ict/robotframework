@@ -1,15 +1,18 @@
 *** Settings ***
-Documentation    Schrijf één van onderstaande testgevallen om in de Gherkin-stijl. 
-          ...    Gebruik hiervoor de volgende notatie richtlijnen:
-          ...    Given -> Opstellen van een preconditie
-          ...    When  -> Uitvoeren van een handeling
-          ...    Then  -> Verificatie van een resultaat
+Documentation    
+        ...    Creëer een drietal keywords met daarin functies:​
+        ...    - Preconditie​
+        ...    - Actie​
+        ...    - Resultaat​
+        ...    Definieer één keyword en gebruik daarin de andere Gherkin keywords​
+        ...    Roep het Gherkin keyword aan in je testgevallen​
 
-Library    SeleniumLibrary    
+Library    Browser    
+
 
 *** Variables ***
 ${url}=           http://localhost:7272
-${browser}=       chrome
+${browser}=       chromium
 ${loginnaam}=     demo
 ${correct_wachtwoord}=    mode
 ${foutief_wachtwoord}=    edom
@@ -35,12 +38,12 @@ Open de login pagina
 
 Vul loginnaam en wachtwoord in
     [Arguments]    ${login}    ${wachtwoord}
-    Input Text    username_field    ${login}
-    Input Text    password_field    ${wachtwoord}
-    Click Button    login_button
+    Type Text    id=username_field    ${login}
+    Type Secret    id=password_field    $wachtwoord
+    Click    id=login_button
 
 Check dat je succesvol bent ingelogd
-    Title Should Be    ${welkomstpagina}
+    Get Title    ==    ${welkomstpagina}
     
 Check dat je login is mislukt
-    Title Should Be    ${foutpagina}
+    Get Title    ==    ${foutpagina}
